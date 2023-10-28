@@ -36,8 +36,8 @@ public class TheLift {
     }
 
     public static void printWagons(int[] wagons) {
-        for (int i = 0; i < wagons.length; i++) {
-            System.out.print(wagons[i] + " ");
+        for (int wagon : wagons) {
+            System.out.print(wagon + " ");
         }
     }
 }

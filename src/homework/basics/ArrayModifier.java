@@ -3,6 +3,7 @@ package homework.basics;
 import java.util.Scanner;
 import java.util.Arrays;
 
+
 public class ArrayModifier {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,10 +18,11 @@ public class ArrayModifier {
         while (!(command = scanner.nextLine()).equals("end")) {
             String[] commandParts = command.split(" ");
 
+            int index1, index2;
             switch (commandParts[0]) {
                 case "swap":
-                    int index1 = Integer.parseInt(commandParts[1]);
-                    int index2 = Integer.parseInt(commandParts[2]);
+                    index1 = Integer.parseInt(commandParts[1]);
+                    index2 = Integer.parseInt(commandParts[2]);
                     int temp = numbers[index1];
                     numbers[index1] = numbers[index2];
                     numbers[index2] = temp;
@@ -38,12 +40,8 @@ public class ArrayModifier {
             }
         }
 
-        // Print the modified array
-        for (int i = 0; i < numbers.length; i++) {
-            if (i != 0) {
-                System.out.print(", ");
-            }
-            System.out.print(numbers[i]);
-        }
+        // Print the modified array using Arrays.toString() and then replace the square brackets
+        System.out.println(Arrays.toString(numbers).replaceAll("[\\[\\]]", ""));
     }
 }
+

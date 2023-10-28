@@ -3,6 +3,7 @@ package homework.basics;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.Collections;
 
 public class CommonElements {
 
@@ -16,10 +17,8 @@ public class CommonElements {
         // Use a HashSet for faster lookups
         Set<String> set = new HashSet<>();
 
-        // Populate the set with elements from the first array
-        for (String element : firstArray) {
-            set.add(element);
-        }
+        // Populate the set with elements from the first array using Collections.addAll()
+        Collections.addAll(set, firstArray);
 
         // Compare elements of the second array with the set and print matches
         for (String element : secondArray) {
@@ -29,3 +28,4 @@ public class CommonElements {
         }
     }
 }
+
